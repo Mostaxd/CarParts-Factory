@@ -1,6 +1,6 @@
 package com.company;
 
-public class ReceivingStock extends Stock{
+public class ReceivingStock extends Stock {
     private final int minStock;
     private final int maxStock;
 
@@ -11,9 +11,9 @@ public class ReceivingStock extends Stock{
         if (maxStock <= minStock) {
             throw new IllegalArgumentException("Max Stock's value must be larger than Min Stock");
         }
-            this.maxStock = maxStock;
-            this.minStock = minStock;
-        }
+        this.maxStock = maxStock;
+        this.minStock = minStock;
+    }
 
 
 
@@ -41,8 +41,8 @@ public class ReceivingStock extends Stock{
             return false;
         } else
             System.out.println("received stock: " + amount + " " + part.getName());
-            super.insert(part, amount);
-            return true;
+        super.insert(part, amount);
+        return true;
     }
 
     public boolean remove(Part part, int amount) {
@@ -59,11 +59,7 @@ public class ReceivingStock extends Stock{
             return false;
         } else
             super.remove(part, amount);
-            return true;
+        return true;
 
     }
 }
-
-
-    
-

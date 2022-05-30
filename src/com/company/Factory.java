@@ -6,13 +6,13 @@ public class Factory {
     protected ReceivingStock receivingStock;
 
     public Factory(Purchasing purchasing, ReceivingStock receivingStock) {
-        if (purchasing == null || receivingStock == null){
+        if (purchasing == null || receivingStock == null) {
             throw new NullPointerException();
         }
 
-            this.purchasing = purchasing;
-            this.receivingStock = receivingStock;
-        }
+        this.purchasing = purchasing;
+        this.receivingStock = receivingStock;
+    }
 
 
     public Purchasing getPurchasing() {
@@ -26,8 +26,7 @@ public class Factory {
     public static Part createPart(PartType partype, String id, String name) {
         if (partype == null) {
             throw new NullPointerException();
-        }
-        else {
+        } else {
             Part p = null;
             if (PartType.SINGLE_PART.equals(partype)) {
                 p = new SinglePart(id, name);

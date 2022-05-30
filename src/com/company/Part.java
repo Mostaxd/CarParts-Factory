@@ -5,16 +5,15 @@ public abstract class Part {
     private String name;
 
     public Part(String id, String name) {
-        if (id == null || name == null){
+        if (id == null || name == null) {
             throw new NullPointerException();
         }
         if (id.isEmpty() || name.isEmpty()) {
-                throw new IllegalArgumentException();
-        }
-        else
-                this.id = id;
-                this.name = name;
-        }
+            throw new IllegalArgumentException();
+        } else
+            this.id = id;
+        this.name = name;
+    }
 
 
     public String getId() {
